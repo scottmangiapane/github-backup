@@ -1,0 +1,23 @@
+{
+  "name": "github-backup-script",
+  "version": "1.0.0",
+  "description": "Automatically creates and maintains mirrors of a users github repositories",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scottmangiapane/github-backup.git"
+  },
+  "author": "Scott Mangiapane",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/scottmangiapane/github-backup/issues"
+  },
+  "homepage": "https://github.com/scottmangiapane/github-backup#readme",
+  "dependencies": {
+    "dotenv": "^14.2.0",
+    "node-fetch": "^3.1.1"
+  }
+}
