@@ -1,0 +1,10 @@
+[Unit]
+Description=Updates mirror backups of git repositories
+Wants=git-backup.timer
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/npm --prefix /home/gemini/git/app run start
+
+[Install]
+WantedBy=multi-user.target

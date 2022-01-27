@@ -1,9 +1,10 @@
 {
-  "name": "github-backup-script",
+  "name": "github-backup",
   "version": "1.0.0",
   "description": "Automatically creates and maintains mirrors of a users github repositories",
   "main": "index.mjs",
   "scripts": {
+    "start": "node index.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

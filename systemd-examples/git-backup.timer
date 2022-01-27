@@ -1,0 +1,10 @@
+[Unit]
+Description=Updates mirror backups of git repositories
+Requires=git-backup.service
+
+[Timer]
+Unit=git-backup.service
+OnCalendar=*-*-* 00:00:00
+
+[Install]
+WantedBy=timers.target
