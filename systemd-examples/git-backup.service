@@ -1,10 +1,14 @@
 [Unit]
-Description=Updates mirror backups of git repositories
+Description=Updates mirror backups of GitHub repositories
 Wants=git-backup.timer
 
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/npm --prefix /home/gemini/git/app run start
+User=gemini
+WorkingDirectory=/home/gemini/scripts/git-backup
+EnvironmentFile=/home/gemini/scripts/git-backup/.env
+ExecStart=/usr/bin/npm run start
 
 [Install]
 WantedBy=multi-user.target
+
