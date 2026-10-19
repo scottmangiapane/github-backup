@@ -1,21 +1,22 @@
-# Github Backup
+# GitHub Backup
 
-Even though I'm sure GitHub takes good care of my repos, I feel better having backups hosted on my own hardware. This simple Node.js script automatically creates and maintains mirrors of all my GitHub repositories.
+I'm sure GitHub takes good care of my repositories, but I feel better keeping backups on my own hardware. This simple Node.js script creates and maintains mirrors of my GitHub repositories.
 
 ## Setup
 
-1. Install dependencies:
-    ```
-    npm install
-    ```
-2. Generate a personal access token with full control of private repositories.
-3. Make a `.env` file with the following content:
+1. Install dependencies and create your environment file:
    ```
-   STORAGE=<path-to-your-storage-directory>
-   TOKEN=<your-personal-access-token>
+   npm install
+   cp .env.example .env
    ```
-4. Run the script:
-    ```
-    npm run start
-    ```
-5. Set up a systemd timer or cron job (optional).
+2. Create a [GitHub personal access token](<https://github.com/settings/personal-access-tokens>) with access to the repositories you want to back up.
+3. Ensure your SSH key is added to GitHub and can access those repositories.
+4. Edit `.env` with your backup directory, token, and fork preference.
+5. Run the backup:
+   ```
+   npm start
+   ```
+6. (Optional) Schedule automatic backups using a systemd timer or cron.
+
+**Note:** This backs up Git repository data only, not issues, pull requests, release attachments, or GitHub settings. Keep your token private, and never commit `.env` or your backups to a public repository.
+
